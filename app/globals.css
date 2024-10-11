@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -24,4 +24,34 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+} */
+
+body {
+  @apply ml-[20px]
+}
+.logoname {
+  font-family: cursive;
+  @apply text-4xl font-bold
+}
+
+.btn {
+  @apply border border-gray-800 px-6 py-4 rounded-[20px] 
+}
+
+.skew-div {
+  transform: skew(-0.07turn, 10deg);
+}
+.skew-img {
+  transform: skew(0.07turn, 10deg);
+}
+.active {
+    border-bottom: 5px solid purple;
+}
+.my-image {
+  transition: all .5s;
+  filter: brightness(.2);
+}
+.my-image:hover {
+  filter: brightness(.9);
+  transition: all .5s;
 }
