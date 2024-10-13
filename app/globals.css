@@ -27,7 +27,7 @@ body {
 } */
 
 body {
-  @apply ml-[20px]
+  @apply mx-[20px]
 }
 .logoname {
   font-family: cursive;
@@ -53,5 +53,34 @@ body {
 }
 .my-image:hover {
   filter: brightness(.9);
+  transition: all .5s;
+}
+.name {
+  white-space: nowrap;
+  animation: typing 5s steps(15) infinite;
+  border-right: 4px solid rgb(252, 200, 122) ;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  0% {
+    width: 0ch;
+  }
+  50% {
+    width: 15ch;
+  }
+  100% {
+    width: 0ch;
+  }
+}
+
+.services {
+  @apply w-[400px] h-[400px] bg-gray-100 shadow-lg flex flex-col py-4 rounded-[10px]
+}
+.services h2{ 
+  @apply text-center text-2xl font-bold
+}
+.brand-icons {
+  @apply w-[50px] text-gray-700 shadow-lg p-4 rounded-[20px] hover:cursor-pointer hover:text-purple-500;
   transition: all .5s;
 }
