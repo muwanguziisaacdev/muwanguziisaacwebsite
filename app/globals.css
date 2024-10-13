@@ -35,7 +35,8 @@ body {
 }
 
 .btn {
-  @apply border border-gray-800 px-6 py-4 rounded-[20px] 
+  @apply border border-gray-800 px-6 py-4 rounded-[20px] overflow-hidden relative z-10;
+  
 }
 
 .skew-div {
@@ -75,7 +76,11 @@ body {
 }
 
 .services {
-  @apply w-[400px] h-[400px] bg-gray-100 shadow-lg flex flex-col py-4 rounded-[10px]
+  @apply w-[400px] h-[400px] bg-gray-100 shadow-lg flex flex-col py-4 rounded-[10px] hover:cursor-pointer;
+  transition: all .5s;
+}
+.services:hover {
+  transform: scale(1.2);
 }
 .services h2{ 
   @apply text-center text-2xl font-bold
@@ -83,4 +88,29 @@ body {
 .brand-icons {
   @apply w-[50px] text-gray-700 shadow-lg p-4 rounded-[20px] hover:cursor-pointer hover:text-purple-500;
   transition: all .5s;
+}
+
+.loader {
+  width: 40px;
+  aspect-ratio: 1;
+  position: relative;
+}
+.loader:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  --c:#0000, #f03355 1deg 120deg,#0000 121deg;
+  background:
+    conic-gradient(from 0deg,  var(--c)) top right,
+    conic-gradient(from 120deg,var(--c)) bottom,
+    conic-gradient(from 240deg,var(--c)) top left;
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  animation: l25 2s infinite cubic-bezier(0.3,1,0,1);
+}
+@keyframes l25 {
+   33%  {inset:-8px;transform: rotate(0deg)}
+   66%  {inset:-8px;transform: rotate(180deg)}
+   100% {inset:0   ;transform: rotate(180deg)}
 }
