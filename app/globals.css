@@ -36,7 +36,10 @@ body {
 
 .btn {
   @apply border border-gray-800 px-6 py-4 rounded-[20px] overflow-hidden relative z-10;
-  
+  transition: all .5s;
+}
+.btn:hover {
+  @apply border-none bg-blue-500 text-white;
 }
 
 .skew-div {
