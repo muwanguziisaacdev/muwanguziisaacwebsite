@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faGithub, faFacebook, faTiktok, faYoutube, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
   // Animation controls for different sections
@@ -22,7 +23,7 @@ const Home = () => {
   return (
     <div className="main-container flex flex-col gap-[100px]">
       <div className="min-h-full mt-[15px] overflow-hidden flex gap-10">
-        <div className="w-[50%]  h-[800px] flex flex-col gap-4 py-[150px] items-center text-4xl">
+        <div className="w-[50%]  h-[800px] flex flex-col gap-4 py-[150px] items-center text-4xl relative">
           <>
             <span className="flex items-center gap-4 py-4">
               Hi, I am <h1 className="name text-yellow-500 text-6xl">Muwanguzi Isaac</h1>
@@ -44,7 +45,13 @@ const Home = () => {
             >
               Contact Me
               </motion.button>
+              
           </div>
+          <div className='flex items-center gap-10 scroll-down'>
+            <FontAwesomeIcon icon={faArrowDown} className='scrolldown-icon text-gray-300'/>
+            <h2 className='text-gray-300'>Scroll</h2>
+          </div>
+          
         </div>
         <div className="w-[50%] rounded-[20px] overflow-hidden max-md:hidden">
           <Image
