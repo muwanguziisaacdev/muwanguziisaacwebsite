@@ -15,6 +15,7 @@ html { scroll-behavior: smooth;}
   --foreground: #171717;
   --BTNGRADIENT2: linear-gradient(145deg, #23cc88, #8ecf35);
   --BTNGRADIENT1: linear-gradient(145deg, #ff4f58, #ffb400);
+  --BTNGRADIENT3: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(136,126,126,0.9864320728291317) 53%, rgba(154,58,104,1) 100%, rgba(0,212,255,1) 100%);
 }
 
 /* ------------------BODY----------------- >*/
@@ -40,6 +41,9 @@ body {
 }
 .thm-btn-2 {
   background-image: var(--BTNGRADIENT2);
+}
+.thm-btn-3 {
+  background-image: var(--BTNGRADIENT3);
 }
 
 .active {
@@ -100,7 +104,18 @@ body {
   @apply flex justify-center w-full mt-10
 }
 
+.contact-wrapper .hero-section  {
+  background-image: url('/assets/bg/dotPattern.webp');
+  width: 100%;
+  height: 300px;
+}
 
+.contact-wrapper form  input {
+  @apply p-4 border-gray-300 border-2 rounded-md outline-none text-xl text-inherit shadow-lg;
+}
+.contact-wrapper form .usernames input {
+  @apply w-full
+}
 
 /* :root {
   --background: #ffffff;
