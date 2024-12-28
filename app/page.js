@@ -1,7 +1,9 @@
 import Image from "next/image";
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import Home from "./Pages/Home";
+
+import Home from "./Components/Home";
+
 config.autoAddCss = false; //disable the automatic addition of css
 
 export default function Page() {

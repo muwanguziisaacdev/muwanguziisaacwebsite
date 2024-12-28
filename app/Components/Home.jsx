@@ -6,37 +6,37 @@ import { faInstagram, faYoutube, faLinkedin, faGithub } from '@fortawesome/free-
 import { faArrowTrendUp } from '@fortawesome/free-solid-svg-icons'
 
 
-const About = () => {
+const Home = () => {
   return (
     <div>
       {/* div containing some text */}
-      <section id="hero-section" className='flex justify-evenly mt-[100px]'>
+      <section id="hero-section" className='flex justify-evenly mt-9 md:mt-[100px] gap-4'>
         <div>
-          <h1 className='flex flex-col text-9xl font-bold'>
+          <h1 className='flex flex-col text-4xl md:leading-wide md:text-6xl lg:text-7xl xl:text-9xl font-bold'>
             <span>I REALLY</span>
             <span>LOVE TO </span>
             <span>TALK WITH</span>
             <span>PEOPLE</span>
           </h1>
         </div>
-        <div>
+        <div className=''>
           <Image 
             src="/my-picture.jpg"
             width={500}
             height={700}
-            className='w-[900px] h-[600px] object-cover object-top my-image'
+            className='w-[250px]  h-[200px] md:w-[450px] md:h-[300px] lg:w-[500px] lg:h-[350px] xl:w-[800px] xl:h-[600px] object-cover object-top my-image'
           />
         </div>
       </section>
-      <footer className='grid grid-cols-3 py-6 items-center gap-5'>
+      <footer className='grid md:place-content-center xl:grid-cols-3 py-6 items-center gap-5'>
         <div className="followus flex flex-col max-w-[300px]">
-          <h3 className='text-xl font-medium '>Follow Us</h3>
-          <Link className='follow-icons' href={'/'}>
+          <h3 className='text-xl font-medium '>Follow Me</h3>
+          <Link className='follow-icons' href={'https://www.linkedin.com/in/muwanguzi-isaac-52b3a0308/'}>
           <FontAwesomeIcon className='icons' icon={faLinkedin}/>
           Linkedln
           <FontAwesomeIcon className=' trendUp-icon' icon={faArrowTrendUp}/>
           </Link>
-          <Link className='follow-icons' href={'/'}>
+          <Link className='follow-icons' href={'https://github.com/muwanguziisaacdev'}>
           <FontAwesomeIcon className='icons' icon={faGithub}/>
           Github
           <FontAwesomeIcon className=' trendUp-icon' icon={faArrowTrendUp}/>
@@ -52,12 +52,12 @@ const About = () => {
           <FontAwesomeIcon className=' trendUp-icon' icon={faArrowTrendUp}/>
           </Link>
         </div>
-        <div className="des w-[500px]">
+        <div className="des ">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam itaque rerum laboriosam deserunt quod dolorum eligendi tempore voluptate autem laborum nostrum inventore, reiciendis porro excepturi enim soluta praesentium in ratione?</p>
           <p>Laboris nisi ut ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisciing elit sed do eiusmod tempor incididnut quis nostrud exercitation ullamco labris nisi
           </p>
         </div>
-        <div className="quote w-[500px] flex flex-col gap-5">
+        <div className="quote  flex flex-col gap-5">
           <p className='font-bold'>
           ‟Quis autem val enum iure reprehendetit qui in ae voluplate velit esse quam nihiil molestiae consequatur, vel illum qui dolorem eum  fugiat quo voluptas nulla pariatur. consectetur adipisciing elit. sed do eiusmod tempor‟
           </p>
@@ -82,4 +82,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Home

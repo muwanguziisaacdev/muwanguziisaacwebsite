@@ -7,7 +7,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
-const Home = () => {
+const Cancelled = () => {
   // Animation controls for different sections
   const controls = useAnimation();
   const [refBenefits, inViewBenefits] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -176,4 +176,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Cancelled;

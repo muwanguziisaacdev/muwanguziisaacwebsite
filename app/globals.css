@@ -2,6 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* ------------------HTML----------------- >*/
+/* ------------------HTML----------------- >*/
+html { scroll-behavior: smooth;}
+
+
+/* ------------------BODY----------------- >*/
+/* ------------------BODY----------------- >*/
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background-color: transparent;}
+::-webkit-scrollbar-thumb { background-color: #333;}
+
+
+/* ------------------NAV----------------- >*/
+
+.nav-open-btn .line {
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  margin-block: 4px;
+  transform-origin: left;
+  animation: menuBtn 400ms ease-in-out alternate infinite;
+}
+
+@keyframes menuBtn {
+  0% {transform: scaleX(1);}
+  100% {transform: scaleX(0.5);}
+}
+
+.nav-open-btn .line-1 { animation-delay: 150ms;}
+
+.nav-open-btn .line-2 { animation-delay: 300ms; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -152,3 +201,5 @@ body {
     transform: translateY(0);
   }
 }
+
+
