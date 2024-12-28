@@ -24,6 +24,7 @@ const Home = () => {
             src="/my-picture.jpg"
             width={500}
             height={700}
+            alt='profile picture'
             className='w-[250px]  h-[200px] md:w-[450px] md:h-[300px] lg:w-[500px] lg:h-[350px] xl:w-[800px] xl:h-[600px] object-cover object-top my-image'
           />
         </div>
@@ -69,10 +70,11 @@ const Home = () => {
               <div className="testimonalprofile w-[50px] h-[50px] rounded-full bg-red-500">
                 {/* this includes the image from the person who is testifying */}
                 <Image 
-                  src="/my-picture.jpg"
+                  src="/assets/dp/dp-01.jpg"
                   width={200}
                   height={100}
-                  className='w-[200px] h-auto object-cover object-top testimonal-image rounded-full'
+                  alt='testimonal dp'
+                  className='w-[300px] h-auto object-cover object-top testimonal-image rounded-full'
           />
               </div>
           </div>
