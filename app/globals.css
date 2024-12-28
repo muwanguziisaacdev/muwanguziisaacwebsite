@@ -8,16 +8,59 @@
 html { scroll-behavior: smooth;}
 
 
+/* ------------------root----------------- >*/
+/* ------------------root----------------- >*/
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --BTNGRADIENT2: linear-gradient(145deg, #23cc88, #8ecf35);
+  --BTNGRADIENT1: linear-gradient(145deg, #ff4f58, #ffb400);
+}
+
 /* ------------------BODY----------------- >*/
 /* ------------------BODY----------------- >*/
+body {
+  @apply mx-[20px];
+  color: var(--foreground);
+}
+
 
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background-color: transparent;}
 ::-webkit-scrollbar-thumb { background-color: #333;}
 
 
+
+/* ------------------REUSABLE STYLES----------------- >*/
+.thm-btn {
+  @apply py-4 px-6 w-[200px] border-none text-white font-medium text-xl rounded-md ;
+}
+.thm-btn-1 {
+  background-image: var(--BTNGRADIENT1);
+}
+.thm-btn-2 {
+  background-image: var(--BTNGRADIENT2);
+}
+
+.active {
+  @apply font-bold text-black relative transition-all 
+}
+.active::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: black;
+  transition: all .5s;
+}
+/* ------------------REUSABLE STYELS----------------- >*/
+
+
 /* ------------------NAV----------------- >*/
 
+.nav-open-btn { cursor: pointer; }
 .nav-open-btn .line {
   width: 30px;
   height: 2px;
@@ -37,17 +80,25 @@ html { scroll-behavior: smooth;}
 .nav-open-btn .line-2 { animation-delay: 300ms; }
 
 
+.project-cards .card {
+  @apply w-[600px] h-[800px]  shadow-lg rounded-md overflow-hidden;
+}
 
+.project-img  img{
+  @apply  h-auto object-cover
+}
 
+.card-content { @apply px-4 mt-5}
+.card-content h2 {
+  @apply text-4xl text-center font-bold py-4
+}
 
-
-
-
-
-
-
-
-
+.card-content p {
+  @apply text-lg text-gray-600
+}
+.card-content .btn-wrapper  {
+  @apply flex justify-center w-full mt-10
+}
 
 
 
@@ -75,9 +126,7 @@ body {
   }
 } */
 
-body {
-  @apply mx-[20px]
-}
+
 .logoname {
   font-family: cursive;
   @apply text-4xl font-bold
@@ -97,9 +146,7 @@ body {
 .skew-img {
   transform: skew(0.07turn, 10deg);
 }
-.active {
-    border-bottom: 5px solid purple;
-}
+
 .my-image {
   transition: all .5s;
   filter: brightness(.2);
